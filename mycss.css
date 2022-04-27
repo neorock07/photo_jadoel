@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+body{
+	font-family: sans-serif;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+/*navbar style*/
+.navbar{
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1px;
+	background-color: #733BD1;
+	color: #fff;
+}
+
+.nav_link a{
+	color: #fff;
+}
+/*navbar menu*/
+.menu{
+
+	display: flex;
+	grid-gap: 1em;
+	font-size: 15px;
+}
+/*hover */
+.menu li:hover{
+	background-color: #7F53DA;
+	border-radius: 5px;
+	transition: 0.3s ease;
+
+}
+.menu li{
+	padding: 5px 5px;
+}
+
+/*dropmenu*/
+.dropmenu_bisnis{
+	background-color: #625FDC;
+	padding: 1em;
+	position: absolute;
+	display: none;
+	border-radius: 8px;
+	top: 30px;
+
+}
+
+.profil{
+	position: relative;
+}
+
+.bisnis{
+	position: relative;
+}
+
+.dropmenu_profil{
+	background-color: #625FDC;
+	padding: 1em;
+	position: absolute;
+	display: none;
+	border-radius: 8px;
+	top: 30px;
+}
+.dropmenu_bisnis li {
+	width: 8em;
+	padding: 0.5em 1em;
+	text-align: center;
+}
+
+
+.dropmenu_bisnis li:hover{
+	background-color: #7F53DA;
+
+}
+.dropmenu_profil li:hover{
+	background-color: #7F53DA;
+}
+.dropmenu_bisnis li+li{
+	margin-top: 10px;
+}
+/*responsive navbar*/
+/*checkbox*/
+input[type = checkbox]{
+	display: none;
+
+}
+/*nav menu style*/
+.nav_btn_sty{
+	display: none;
+	font-size: 24px;
+	user-select: none;	
+}
+/*kueri ukuran*/
+@media (max-width: 768px){
+	.menu{
+		display: none;
+		position: absolute;
+		background-color:#733BD1;
+		right: 0;
+		left: 0;
+		text-align: center;
+		padding: 20px 0;
+	}
+
+	.menu li:hover{
+		display: inline-block;
+		background-color:#7F53DA;
+		transition: 0.3s ease; 
+	}
+	.menu li+li{
+		margin-top: 12px;
+	}
+	input[type = checkbox]:checked ~ .menu{
+		display: block;
+	}
+	.nav_btn_sty{
+		display: block;
+	}
+	.dropmenu_bisnis{
+		left: 50%;
+		top: 30px;
+		transform: translateX(35%);
+	}
+	.dropmenu_profil{
+		left: 50%;
+		top: 30px;
+		transform: translateX(35%);
+	}
+	.dropmenu_bisnis li:hover{
+		background-color: #7F53DA;
+	}
+	.dropmenu_profil li:hover{
+		background-color: #7F53DA;
+	}
+
+}
+
+
+
